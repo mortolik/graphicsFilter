@@ -66,5 +66,35 @@ namespace GraphicsFirstLab
         {
             backgroundWorker1.CancelAsync();
         }
+
+        private void ñåïèÿToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new SepiaFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ÷ÁToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new GrayScaleFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ñîáåëÿToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new SobelFilter(true); // true - ãîğèçîíòàëüíîå ÿäğî
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ğåçêîñòüToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new SharpnessFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ÿğêîñòüToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new BrightnessFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
