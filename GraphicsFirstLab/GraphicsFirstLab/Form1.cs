@@ -96,5 +96,11 @@ namespace GraphicsFirstLab
             Filters.Filters filter = new BrightnessFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void òèñíåíèåToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new EmbossFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

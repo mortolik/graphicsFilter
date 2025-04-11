@@ -37,6 +37,7 @@
             инверсияToolStripMenuItem = new ToolStripMenuItem();
             сепияToolStripMenuItem = new ToolStripMenuItem();
             чБToolStripMenuItem = new ToolStripMenuItem();
+            яркостьToolStripMenuItem = new ToolStripMenuItem();
             матричныеToolStripMenuItem = new ToolStripMenuItem();
             размытиеToolStripMenuItem = new ToolStripMenuItem();
             собеляToolStripMenuItem = new ToolStripMenuItem();
@@ -45,7 +46,7 @@
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             progressBar1 = new ProgressBar();
             button1 = new Button();
-            яркостьToolStripMenuItem = new ToolStripMenuItem();
+            тиснениеToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -116,9 +117,16 @@
             чБToolStripMenuItem.Text = "ЧБ";
             чБToolStripMenuItem.Click += чБToolStripMenuItem_Click;
             // 
+            // яркостьToolStripMenuItem
+            // 
+            яркостьToolStripMenuItem.Name = "яркостьToolStripMenuItem";
+            яркостьToolStripMenuItem.Size = new Size(180, 22);
+            яркостьToolStripMenuItem.Text = "Яркость";
+            яркостьToolStripMenuItem.Click += яркостьToolStripMenuItem_Click;
+            // 
             // матричныеToolStripMenuItem
             // 
-            матричныеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { размытиеToolStripMenuItem, собеляToolStripMenuItem, резкостьToolStripMenuItem });
+            матричныеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { размытиеToolStripMenuItem, собеляToolStripMenuItem, резкостьToolStripMenuItem, тиснениеToolStripMenuItem });
             матричныеToolStripMenuItem.Name = "матричныеToolStripMenuItem";
             матричныеToolStripMenuItem.Size = new Size(180, 22);
             матричныеToolStripMenuItem.Text = "Матричные";
@@ -178,12 +186,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // яркостьToolStripMenuItem
+            // тиснениеToolStripMenuItem
             // 
-            яркостьToolStripMenuItem.Name = "яркостьToolStripMenuItem";
-            яркостьToolStripMenuItem.Size = new Size(180, 22);
-            яркостьToolStripMenuItem.Text = "Яркость";
-            яркостьToolStripMenuItem.Click += яркостьToolStripMenuItem_Click;
+            тиснениеToolStripMenuItem.Name = "тиснениеToolStripMenuItem";
+            тиснениеToolStripMenuItem.Size = new Size(180, 22);
+            тиснениеToolStripMenuItem.Text = "Тиснение";
+            тиснениеToolStripMenuItem.Click += тиснениеToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -225,5 +233,6 @@
         private ToolStripMenuItem собеляToolStripMenuItem;
         private ToolStripMenuItem резкостьToolStripMenuItem;
         private ToolStripMenuItem яркостьToolStripMenuItem;
+        private ToolStripMenuItem тиснениеToolStripMenuItem;
     }
 }
