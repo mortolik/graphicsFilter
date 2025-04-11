@@ -102,5 +102,12 @@ namespace GraphicsFirstLab
             Filters.Filters filter = new EmbossFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void ìåäèàííûéToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new MedianFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+
+        }
     }
 }

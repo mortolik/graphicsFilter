@@ -42,11 +42,12 @@
             размытиеToolStripMenuItem = new ToolStripMenuItem();
             собеляToolStripMenuItem = new ToolStripMenuItem();
             резкостьToolStripMenuItem = new ToolStripMenuItem();
+            тиснениеToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             progressBar1 = new ProgressBar();
             button1 = new Button();
-            тиснениеToolStripMenuItem = new ToolStripMenuItem();
+            медианныйToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -99,34 +100,34 @@
             // инверсияToolStripMenuItem
             // 
             инверсияToolStripMenuItem.Name = "инверсияToolStripMenuItem";
-            инверсияToolStripMenuItem.Size = new Size(180, 22);
+            инверсияToolStripMenuItem.Size = new Size(128, 22);
             инверсияToolStripMenuItem.Text = "Инверсия";
             инверсияToolStripMenuItem.Click += инверсияToolStripMenuItem_Click;
             // 
             // сепияToolStripMenuItem
             // 
             сепияToolStripMenuItem.Name = "сепияToolStripMenuItem";
-            сепияToolStripMenuItem.Size = new Size(180, 22);
+            сепияToolStripMenuItem.Size = new Size(128, 22);
             сепияToolStripMenuItem.Text = "Сепия";
             сепияToolStripMenuItem.Click += сепияToolStripMenuItem_Click;
             // 
             // чБToolStripMenuItem
             // 
             чБToolStripMenuItem.Name = "чБToolStripMenuItem";
-            чБToolStripMenuItem.Size = new Size(180, 22);
+            чБToolStripMenuItem.Size = new Size(128, 22);
             чБToolStripMenuItem.Text = "ЧБ";
             чБToolStripMenuItem.Click += чБToolStripMenuItem_Click;
             // 
             // яркостьToolStripMenuItem
             // 
             яркостьToolStripMenuItem.Name = "яркостьToolStripMenuItem";
-            яркостьToolStripMenuItem.Size = new Size(180, 22);
+            яркостьToolStripMenuItem.Size = new Size(128, 22);
             яркостьToolStripMenuItem.Text = "Яркость";
             яркостьToolStripMenuItem.Click += яркостьToolStripMenuItem_Click;
             // 
             // матричныеToolStripMenuItem
             // 
-            матричныеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { размытиеToolStripMenuItem, собеляToolStripMenuItem, резкостьToolStripMenuItem, тиснениеToolStripMenuItem });
+            матричныеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { размытиеToolStripMenuItem, собеляToolStripMenuItem, резкостьToolStripMenuItem, тиснениеToolStripMenuItem, медианныйToolStripMenuItem });
             матричныеToolStripMenuItem.Name = "матричныеToolStripMenuItem";
             матричныеToolStripMenuItem.Size = new Size(180, 22);
             матричныеToolStripMenuItem.Text = "Матричные";
@@ -151,6 +152,13 @@
             резкостьToolStripMenuItem.Size = new Size(180, 22);
             резкостьToolStripMenuItem.Text = "Резкость";
             резкостьToolStripMenuItem.Click += резкостьToolStripMenuItem_Click;
+            // 
+            // тиснениеToolStripMenuItem
+            // 
+            тиснениеToolStripMenuItem.Name = "тиснениеToolStripMenuItem";
+            тиснениеToolStripMenuItem.Size = new Size(180, 22);
+            тиснениеToolStripMenuItem.Text = "Тиснение";
+            тиснениеToolStripMenuItem.Click += тиснениеToolStripMenuItem_Click;
             // 
             // pictureBox1
             // 
@@ -186,12 +194,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // тиснениеToolStripMenuItem
+            // медианныйToolStripMenuItem
             // 
-            тиснениеToolStripMenuItem.Name = "тиснениеToolStripMenuItem";
-            тиснениеToolStripMenuItem.Size = new Size(180, 22);
-            тиснениеToolStripMenuItem.Text = "Тиснение";
-            тиснениеToolStripMenuItem.Click += тиснениеToolStripMenuItem_Click;
+            медианныйToolStripMenuItem.Name = "медианныйToolStripMenuItem";
+            медианныйToolStripMenuItem.Size = new Size(180, 22);
+            медианныйToolStripMenuItem.Text = "Медианный";
+            медианныйToolStripMenuItem.Click += медианныйToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -234,5 +242,6 @@
         private ToolStripMenuItem резкостьToolStripMenuItem;
         private ToolStripMenuItem яркостьToolStripMenuItem;
         private ToolStripMenuItem тиснениеToolStripMenuItem;
+        private ToolStripMenuItem медианныйToolStripMenuItem;
     }
 }
