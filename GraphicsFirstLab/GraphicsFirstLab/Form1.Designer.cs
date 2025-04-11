@@ -47,12 +47,14 @@
             щарраToolStripMenuItem = new ToolStripMenuItem();
             горизонтальныйToolStripMenuItem = new ToolStripMenuItem();
             вертикальныйToolStripMenuItem = new ToolStripMenuItem();
+            матморфологияToolStripMenuItem = new ToolStripMenuItem();
+            dilationToolStripMenuItem = new ToolStripMenuItem();
+            erosionToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             progressBar1 = new ProgressBar();
             button1 = new Button();
-            матморфологияToolStripMenuItem = new ToolStripMenuItem();
-            dilationToolStripMenuItem = new ToolStripMenuItem();
+            openingToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -140,35 +142,35 @@
             // размытиеToolStripMenuItem
             // 
             размытиеToolStripMenuItem.Name = "размытиеToolStripMenuItem";
-            размытиеToolStripMenuItem.Size = new Size(180, 22);
+            размытиеToolStripMenuItem.Size = new Size(140, 22);
             размытиеToolStripMenuItem.Text = "Размытие";
             размытиеToolStripMenuItem.Click += размытиеToolStripMenuItem_Click;
             // 
             // собеляToolStripMenuItem
             // 
             собеляToolStripMenuItem.Name = "собеляToolStripMenuItem";
-            собеляToolStripMenuItem.Size = new Size(180, 22);
+            собеляToolStripMenuItem.Size = new Size(140, 22);
             собеляToolStripMenuItem.Text = "Собеля";
             собеляToolStripMenuItem.Click += собеляToolStripMenuItem_Click;
             // 
             // резкостьToolStripMenuItem
             // 
             резкостьToolStripMenuItem.Name = "резкостьToolStripMenuItem";
-            резкостьToolStripMenuItem.Size = new Size(180, 22);
+            резкостьToolStripMenuItem.Size = new Size(140, 22);
             резкостьToolStripMenuItem.Text = "Резкость";
             резкостьToolStripMenuItem.Click += резкостьToolStripMenuItem_Click;
             // 
             // тиснениеToolStripMenuItem
             // 
             тиснениеToolStripMenuItem.Name = "тиснениеToolStripMenuItem";
-            тиснениеToolStripMenuItem.Size = new Size(180, 22);
+            тиснениеToolStripMenuItem.Size = new Size(140, 22);
             тиснениеToolStripMenuItem.Text = "Тиснение";
             тиснениеToolStripMenuItem.Click += тиснениеToolStripMenuItem_Click;
             // 
             // медианныйToolStripMenuItem
             // 
             медианныйToolStripMenuItem.Name = "медианныйToolStripMenuItem";
-            медианныйToolStripMenuItem.Size = new Size(180, 22);
+            медианныйToolStripMenuItem.Size = new Size(140, 22);
             медианныйToolStripMenuItem.Text = "Медианный";
             медианныйToolStripMenuItem.Click += медианныйToolStripMenuItem_Click;
             // 
@@ -176,23 +178,44 @@
             // 
             щарраToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { горизонтальныйToolStripMenuItem, вертикальныйToolStripMenuItem });
             щарраToolStripMenuItem.Name = "щарраToolStripMenuItem";
-            щарраToolStripMenuItem.Size = new Size(180, 22);
+            щарраToolStripMenuItem.Size = new Size(140, 22);
             щарраToolStripMenuItem.Text = "Щарра";
             щарраToolStripMenuItem.Click += щарраToolStripMenuItem_Click;
             // 
             // горизонтальныйToolStripMenuItem
             // 
             горизонтальныйToolStripMenuItem.Name = "горизонтальныйToolStripMenuItem";
-            горизонтальныйToolStripMenuItem.Size = new Size(180, 22);
+            горизонтальныйToolStripMenuItem.Size = new Size(167, 22);
             горизонтальныйToolStripMenuItem.Text = "Горизонтальный";
             горизонтальныйToolStripMenuItem.Click += горизонтальныйToolStripMenuItem_Click;
             // 
             // вертикальныйToolStripMenuItem
             // 
             вертикальныйToolStripMenuItem.Name = "вертикальныйToolStripMenuItem";
-            вертикальныйToolStripMenuItem.Size = new Size(180, 22);
+            вертикальныйToolStripMenuItem.Size = new Size(167, 22);
             вертикальныйToolStripMenuItem.Text = "Вертикальный";
             вертикальныйToolStripMenuItem.Click += вертикальныйToolStripMenuItem_Click;
+            // 
+            // матморфологияToolStripMenuItem
+            // 
+            матморфологияToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dilationToolStripMenuItem, erosionToolStripMenuItem, openingToolStripMenuItem });
+            матморфологияToolStripMenuItem.Name = "матморфологияToolStripMenuItem";
+            матморфологияToolStripMenuItem.Size = new Size(180, 22);
+            матморфологияToolStripMenuItem.Text = "Матморфология";
+            // 
+            // dilationToolStripMenuItem
+            // 
+            dilationToolStripMenuItem.Name = "dilationToolStripMenuItem";
+            dilationToolStripMenuItem.Size = new Size(180, 22);
+            dilationToolStripMenuItem.Text = "Dilation";
+            dilationToolStripMenuItem.Click += dilationToolStripMenuItem_Click;
+            // 
+            // erosionToolStripMenuItem
+            // 
+            erosionToolStripMenuItem.Name = "erosionToolStripMenuItem";
+            erosionToolStripMenuItem.Size = new Size(180, 22);
+            erosionToolStripMenuItem.Text = "Erosion";
+            erosionToolStripMenuItem.Click += erosionToolStripMenuItem_Click;
             // 
             // pictureBox1
             // 
@@ -228,19 +251,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // матморфологияToolStripMenuItem
+            // openingToolStripMenuItem
             // 
-            матморфологияToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dilationToolStripMenuItem });
-            матморфологияToolStripMenuItem.Name = "матморфологияToolStripMenuItem";
-            матморфологияToolStripMenuItem.Size = new Size(180, 22);
-            матморфологияToolStripMenuItem.Text = "Матморфология";
-            // 
-            // dilationToolStripMenuItem
-            // 
-            dilationToolStripMenuItem.Name = "dilationToolStripMenuItem";
-            dilationToolStripMenuItem.Size = new Size(180, 22);
-            dilationToolStripMenuItem.Text = "Dilation";
-            dilationToolStripMenuItem.Click += dilationToolStripMenuItem_Click;
+            openingToolStripMenuItem.Name = "openingToolStripMenuItem";
+            openingToolStripMenuItem.Size = new Size(180, 22);
+            openingToolStripMenuItem.Text = "Opening";
+            openingToolStripMenuItem.Click += openingToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -289,5 +305,7 @@
         private ToolStripMenuItem вертикальныйToolStripMenuItem;
         private ToolStripMenuItem матморфологияToolStripMenuItem;
         private ToolStripMenuItem dilationToolStripMenuItem;
+        private ToolStripMenuItem erosionToolStripMenuItem;
+        private ToolStripMenuItem openingToolStripMenuItem;
     }
 }

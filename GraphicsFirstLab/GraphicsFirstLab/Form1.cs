@@ -133,5 +133,18 @@ namespace GraphicsFirstLab
             Filters.Filters filter = new DilationFilter(currentStructElement);
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void erosionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new ErosionFilter(currentStructElement);
+            backgroundWorker1.RunWorkerAsync(filter);
+
+        }
+
+        private void openingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new OpeningFilter(currentStructElement);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
