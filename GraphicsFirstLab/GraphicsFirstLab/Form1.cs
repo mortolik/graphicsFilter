@@ -1,3 +1,4 @@
+using CG;
 using Filters;
 using System.ComponentModel;
 
@@ -108,6 +109,29 @@ namespace GraphicsFirstLab
             Filters.Filters filter = new MedianFilter();
             backgroundWorker1.RunWorkerAsync(filter);
 
+        }
+
+        private void ùàğğàToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void ãîğèçîíòàëüíûéToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new BorderSharra(true);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void âåğòèêàëüíûéToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new BorderSharra(false);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private StructElement currentStructElement = StructElement.Rectangle3x3();
+        private void dilationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new DilationFilter(currentStructElement);
+            backgroundWorker1.RunWorkerAsync(filter);
         }
     }
 }

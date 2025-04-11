@@ -43,11 +43,16 @@
             собеляToolStripMenuItem = new ToolStripMenuItem();
             резкостьToolStripMenuItem = new ToolStripMenuItem();
             тиснениеToolStripMenuItem = new ToolStripMenuItem();
+            медианныйToolStripMenuItem = new ToolStripMenuItem();
+            щарраToolStripMenuItem = new ToolStripMenuItem();
+            горизонтальныйToolStripMenuItem = new ToolStripMenuItem();
+            вертикальныйToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             progressBar1 = new ProgressBar();
             button1 = new Button();
-            медианныйToolStripMenuItem = new ToolStripMenuItem();
+            матморфологияToolStripMenuItem = new ToolStripMenuItem();
+            dilationToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -85,7 +90,7 @@
             // 
             // фильтрToolStripMenuItem
             // 
-            фильтрToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { точечныеToolStripMenuItem, матричныеToolStripMenuItem });
+            фильтрToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { точечныеToolStripMenuItem, матричныеToolStripMenuItem, матморфологияToolStripMenuItem });
             фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
             фильтрToolStripMenuItem.Size = new Size(60, 20);
             фильтрToolStripMenuItem.Text = "Фильтр";
@@ -127,7 +132,7 @@
             // 
             // матричныеToolStripMenuItem
             // 
-            матричныеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { размытиеToolStripMenuItem, собеляToolStripMenuItem, резкостьToolStripMenuItem, тиснениеToolStripMenuItem, медианныйToolStripMenuItem });
+            матричныеToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { размытиеToolStripMenuItem, собеляToolStripMenuItem, резкостьToolStripMenuItem, тиснениеToolStripMenuItem, медианныйToolStripMenuItem, щарраToolStripMenuItem });
             матричныеToolStripMenuItem.Name = "матричныеToolStripMenuItem";
             матричныеToolStripMenuItem.Size = new Size(180, 22);
             матричныеToolStripMenuItem.Text = "Матричные";
@@ -159,6 +164,35 @@
             тиснениеToolStripMenuItem.Size = new Size(180, 22);
             тиснениеToolStripMenuItem.Text = "Тиснение";
             тиснениеToolStripMenuItem.Click += тиснениеToolStripMenuItem_Click;
+            // 
+            // медианныйToolStripMenuItem
+            // 
+            медианныйToolStripMenuItem.Name = "медианныйToolStripMenuItem";
+            медианныйToolStripMenuItem.Size = new Size(180, 22);
+            медианныйToolStripMenuItem.Text = "Медианный";
+            медианныйToolStripMenuItem.Click += медианныйToolStripMenuItem_Click;
+            // 
+            // щарраToolStripMenuItem
+            // 
+            щарраToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { горизонтальныйToolStripMenuItem, вертикальныйToolStripMenuItem });
+            щарраToolStripMenuItem.Name = "щарраToolStripMenuItem";
+            щарраToolStripMenuItem.Size = new Size(180, 22);
+            щарраToolStripMenuItem.Text = "Щарра";
+            щарраToolStripMenuItem.Click += щарраToolStripMenuItem_Click;
+            // 
+            // горизонтальныйToolStripMenuItem
+            // 
+            горизонтальныйToolStripMenuItem.Name = "горизонтальныйToolStripMenuItem";
+            горизонтальныйToolStripMenuItem.Size = new Size(180, 22);
+            горизонтальныйToolStripMenuItem.Text = "Горизонтальный";
+            горизонтальныйToolStripMenuItem.Click += горизонтальныйToolStripMenuItem_Click;
+            // 
+            // вертикальныйToolStripMenuItem
+            // 
+            вертикальныйToolStripMenuItem.Name = "вертикальныйToolStripMenuItem";
+            вертикальныйToolStripMenuItem.Size = new Size(180, 22);
+            вертикальныйToolStripMenuItem.Text = "Вертикальный";
+            вертикальныйToolStripMenuItem.Click += вертикальныйToolStripMenuItem_Click;
             // 
             // pictureBox1
             // 
@@ -194,12 +228,19 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // медианныйToolStripMenuItem
+            // матморфологияToolStripMenuItem
             // 
-            медианныйToolStripMenuItem.Name = "медианныйToolStripMenuItem";
-            медианныйToolStripMenuItem.Size = new Size(180, 22);
-            медианныйToolStripMenuItem.Text = "Медианный";
-            медианныйToolStripMenuItem.Click += медианныйToolStripMenuItem_Click;
+            матморфологияToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dilationToolStripMenuItem });
+            матморфологияToolStripMenuItem.Name = "матморфологияToolStripMenuItem";
+            матморфологияToolStripMenuItem.Size = new Size(180, 22);
+            матморфологияToolStripMenuItem.Text = "Матморфология";
+            // 
+            // dilationToolStripMenuItem
+            // 
+            dilationToolStripMenuItem.Name = "dilationToolStripMenuItem";
+            dilationToolStripMenuItem.Size = new Size(180, 22);
+            dilationToolStripMenuItem.Text = "Dilation";
+            dilationToolStripMenuItem.Click += dilationToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -243,5 +284,10 @@
         private ToolStripMenuItem яркостьToolStripMenuItem;
         private ToolStripMenuItem тиснениеToolStripMenuItem;
         private ToolStripMenuItem медианныйToolStripMenuItem;
+        private ToolStripMenuItem щарраToolStripMenuItem;
+        private ToolStripMenuItem горизонтальныйToolStripMenuItem;
+        private ToolStripMenuItem вертикальныйToolStripMenuItem;
+        private ToolStripMenuItem матморфологияToolStripMenuItem;
+        private ToolStripMenuItem dilationToolStripMenuItem;
     }
 }
