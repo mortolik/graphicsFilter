@@ -53,11 +53,12 @@
             openingToolStripMenuItem = new ToolStripMenuItem();
             closingToolStripMenuItem = new ToolStripMenuItem();
             topHatToolStripMenuItem = new ToolStripMenuItem();
+            серыйМирToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             progressBar1 = new ProgressBar();
             button1 = new Button();
-            серыйМирToolStripMenuItem = new ToolStripMenuItem();
+            градиентToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -95,7 +96,7 @@
             // 
             // фильтрToolStripMenuItem
             // 
-            фильтрToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { точечныеToolStripMenuItem, матричныеToolStripMenuItem, матморфологияToolStripMenuItem, topHatToolStripMenuItem, серыйМирToolStripMenuItem });
+            фильтрToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { точечныеToolStripMenuItem, матричныеToolStripMenuItem, матморфологияToolStripMenuItem, topHatToolStripMenuItem, серыйМирToolStripMenuItem, градиентToolStripMenuItem });
             фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
             фильтрToolStripMenuItem.Size = new Size(60, 20);
             фильтрToolStripMenuItem.Text = "Фильтр";
@@ -241,6 +242,13 @@
             topHatToolStripMenuItem.Text = "TopHat";
             topHatToolStripMenuItem.Click += topHatToolStripMenuItem_Click;
             // 
+            // серыйМирToolStripMenuItem
+            // 
+            серыйМирToolStripMenuItem.Name = "серыйМирToolStripMenuItem";
+            серыйМирToolStripMenuItem.Size = new Size(180, 22);
+            серыйМирToolStripMenuItem.Text = "Серый мир";
+            серыйМирToolStripMenuItem.Click += серыйМирToolStripMenuItem_Click;
+            // 
             // pictureBox1
             // 
             pictureBox1.Location = new Point(0, 24);
@@ -275,12 +283,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // серыйМирToolStripMenuItem
+            // градиентToolStripMenuItem
             // 
-            серыйМирToolStripMenuItem.Name = "серыйМирToolStripMenuItem";
-            серыйМирToolStripMenuItem.Size = new Size(180, 22);
-            серыйМирToolStripMenuItem.Text = "Серый мир";
-            серыйМирToolStripMenuItem.Click += серыйМирToolStripMenuItem_Click;
+            градиентToolStripMenuItem.Name = "градиентToolStripMenuItem";
+            градиентToolStripMenuItem.Size = new Size(180, 22);
+            градиентToolStripMenuItem.Text = "Градиент";
+            градиентToolStripMenuItem.Click += градиентToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -334,5 +342,6 @@
         private ToolStripMenuItem closingToolStripMenuItem;
         private ToolStripMenuItem topHatToolStripMenuItem;
         private ToolStripMenuItem серыйМирToolStripMenuItem;
+        private ToolStripMenuItem градиентToolStripMenuItem;
     }
 }
