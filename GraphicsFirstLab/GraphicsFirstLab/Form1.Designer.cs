@@ -51,11 +51,12 @@
             dilationToolStripMenuItem = new ToolStripMenuItem();
             erosionToolStripMenuItem = new ToolStripMenuItem();
             openingToolStripMenuItem = new ToolStripMenuItem();
+            closingToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             progressBar1 = new ProgressBar();
             button1 = new Button();
-            closingToolStripMenuItem = new ToolStripMenuItem();
+            topHatToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -93,7 +94,7 @@
             // 
             // фильтрToolStripMenuItem
             // 
-            фильтрToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { точечныеToolStripMenuItem, матричныеToolStripMenuItem, матморфологияToolStripMenuItem });
+            фильтрToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { точечныеToolStripMenuItem, матричныеToolStripMenuItem, матморфологияToolStripMenuItem, topHatToolStripMenuItem });
             фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
             фильтрToolStripMenuItem.Size = new Size(60, 20);
             фильтрToolStripMenuItem.Text = "Фильтр";
@@ -225,6 +226,13 @@
             openingToolStripMenuItem.Text = "Opening";
             openingToolStripMenuItem.Click += openingToolStripMenuItem_Click;
             // 
+            // closingToolStripMenuItem
+            // 
+            closingToolStripMenuItem.Name = "closingToolStripMenuItem";
+            closingToolStripMenuItem.Size = new Size(180, 22);
+            closingToolStripMenuItem.Text = "Closing";
+            closingToolStripMenuItem.Click += closingToolStripMenuItem_Click;
+            // 
             // pictureBox1
             // 
             pictureBox1.Location = new Point(0, 24);
@@ -259,12 +267,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // closingToolStripMenuItem
+            // topHatToolStripMenuItem
             // 
-            closingToolStripMenuItem.Name = "closingToolStripMenuItem";
-            closingToolStripMenuItem.Size = new Size(180, 22);
-            closingToolStripMenuItem.Text = "Closing";
-            closingToolStripMenuItem.Click += closingToolStripMenuItem_Click;
+            topHatToolStripMenuItem.Name = "topHatToolStripMenuItem";
+            topHatToolStripMenuItem.Size = new Size(180, 22);
+            topHatToolStripMenuItem.Text = "TopHat";
+            topHatToolStripMenuItem.Click += topHatToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -316,5 +324,6 @@
         private ToolStripMenuItem erosionToolStripMenuItem;
         private ToolStripMenuItem openingToolStripMenuItem;
         private ToolStripMenuItem closingToolStripMenuItem;
+        private ToolStripMenuItem topHatToolStripMenuItem;
     }
 }

@@ -152,5 +152,11 @@ namespace GraphicsFirstLab
             Filters.Filters filter = new ClosingFilter(currentStructElement);
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void topHatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new TopHatFilter(currentStructElement);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
