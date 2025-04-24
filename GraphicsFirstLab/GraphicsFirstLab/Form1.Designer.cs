@@ -52,11 +52,12 @@
             erosionToolStripMenuItem = new ToolStripMenuItem();
             openingToolStripMenuItem = new ToolStripMenuItem();
             closingToolStripMenuItem = new ToolStripMenuItem();
+            topHatToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             progressBar1 = new ProgressBar();
             button1 = new Button();
-            topHatToolStripMenuItem = new ToolStripMenuItem();
+            серыйМирToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -94,7 +95,7 @@
             // 
             // фильтрToolStripMenuItem
             // 
-            фильтрToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { точечныеToolStripMenuItem, матричныеToolStripMenuItem, матморфологияToolStripMenuItem, topHatToolStripMenuItem });
+            фильтрToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { точечныеToolStripMenuItem, матричныеToolStripMenuItem, матморфологияToolStripMenuItem, topHatToolStripMenuItem, серыйМирToolStripMenuItem });
             фильтрToolStripMenuItem.Name = "фильтрToolStripMenuItem";
             фильтрToolStripMenuItem.Size = new Size(60, 20);
             фильтрToolStripMenuItem.Text = "Фильтр";
@@ -208,30 +209,37 @@
             // dilationToolStripMenuItem
             // 
             dilationToolStripMenuItem.Name = "dilationToolStripMenuItem";
-            dilationToolStripMenuItem.Size = new Size(180, 22);
+            dilationToolStripMenuItem.Size = new Size(120, 22);
             dilationToolStripMenuItem.Text = "Dilation";
             dilationToolStripMenuItem.Click += dilationToolStripMenuItem_Click;
             // 
             // erosionToolStripMenuItem
             // 
             erosionToolStripMenuItem.Name = "erosionToolStripMenuItem";
-            erosionToolStripMenuItem.Size = new Size(180, 22);
+            erosionToolStripMenuItem.Size = new Size(120, 22);
             erosionToolStripMenuItem.Text = "Erosion";
             erosionToolStripMenuItem.Click += erosionToolStripMenuItem_Click;
             // 
             // openingToolStripMenuItem
             // 
             openingToolStripMenuItem.Name = "openingToolStripMenuItem";
-            openingToolStripMenuItem.Size = new Size(180, 22);
+            openingToolStripMenuItem.Size = new Size(120, 22);
             openingToolStripMenuItem.Text = "Opening";
             openingToolStripMenuItem.Click += openingToolStripMenuItem_Click;
             // 
             // closingToolStripMenuItem
             // 
             closingToolStripMenuItem.Name = "closingToolStripMenuItem";
-            closingToolStripMenuItem.Size = new Size(180, 22);
+            closingToolStripMenuItem.Size = new Size(120, 22);
             closingToolStripMenuItem.Text = "Closing";
             closingToolStripMenuItem.Click += closingToolStripMenuItem_Click;
+            // 
+            // topHatToolStripMenuItem
+            // 
+            topHatToolStripMenuItem.Name = "topHatToolStripMenuItem";
+            topHatToolStripMenuItem.Size = new Size(180, 22);
+            topHatToolStripMenuItem.Text = "TopHat";
+            topHatToolStripMenuItem.Click += topHatToolStripMenuItem_Click;
             // 
             // pictureBox1
             // 
@@ -267,12 +275,12 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // topHatToolStripMenuItem
+            // серыйМирToolStripMenuItem
             // 
-            topHatToolStripMenuItem.Name = "topHatToolStripMenuItem";
-            topHatToolStripMenuItem.Size = new Size(180, 22);
-            topHatToolStripMenuItem.Text = "TopHat";
-            topHatToolStripMenuItem.Click += topHatToolStripMenuItem_Click;
+            серыйМирToolStripMenuItem.Name = "серыйМирToolStripMenuItem";
+            серыйМирToolStripMenuItem.Size = new Size(180, 22);
+            серыйМирToolStripMenuItem.Text = "Серый мир";
+            серыйМирToolStripMenuItem.Click += серыйМирToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -325,5 +333,6 @@
         private ToolStripMenuItem openingToolStripMenuItem;
         private ToolStripMenuItem closingToolStripMenuItem;
         private ToolStripMenuItem topHatToolStripMenuItem;
+        private ToolStripMenuItem серыйМирToolStripMenuItem;
     }
 }
