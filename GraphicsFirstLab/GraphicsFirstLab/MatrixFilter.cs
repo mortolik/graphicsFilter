@@ -30,9 +30,16 @@ namespace Filters
                     int idY = Clamp(y + l, 0, sourceImage.Height - 1);
                     Color neighborColor = sourceImage.GetPixel(idX, idY);
 
-                    resultR += neighborColor.R * kernel[k + radiusX, l + radiusY];
-                    resultG += neighborColor.G * kernel[k + radiusX, l + radiusY];
-                    resultB += neighborColor.B * kernel[k + radiusX, l + radiusY];
+                    int kernelX = k + radiusX;
+                    int kernelY = l + radiusY;
+
+                    if (kernelX >= 0 && kernelX < kernel.GetLength(0) &&
+                        kernelY >= 0 && kernelY < kernel.GetLength(1))
+                    {
+                        resultR += neighborColor.R * kernel[kernelX, kernelY];
+                        resultG += neighborColor.G * kernel[kernelX, kernelY];
+                        resultB += neighborColor.B * kernel[kernelX, kernelY];
+                    }
                 }
             }
 
