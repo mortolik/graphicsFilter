@@ -170,5 +170,11 @@ namespace GraphicsFirstLab
             Filters.Filters filter = new GradientFilter(currentStructElement);
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void ñòåêëîToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new GlassFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
