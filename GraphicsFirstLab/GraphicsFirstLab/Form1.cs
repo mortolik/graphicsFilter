@@ -219,5 +219,23 @@ namespace GraphicsFirstLab
                 pictureBox1.Refresh();
             }
         }
+
+        private void âîëíà1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new Waves1();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void âîëíà2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new Waves2();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ïîâîğîòToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters.Filters filter = new RotationFilter(-45.0f, image);
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
