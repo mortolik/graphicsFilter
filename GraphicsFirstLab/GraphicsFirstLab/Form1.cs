@@ -7,6 +7,8 @@ namespace GraphicsFirstLab
     public partial class Form1 : Form
     {
         Bitmap image;
+        private Stack<Bitmap> returnBack = new Stack<Bitmap>();
+        private Stack<Bitmap> returnForward = new Stack<Bitmap>();
 
         public Form1()
         {
@@ -37,7 +39,18 @@ namespace GraphicsFirstLab
             Filters.Filters filter = new BlurFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+        private void SaveCondition()
+        {
+            if (image != null)
+            {
+                returnBack.Push(new Bitmap(image));
+                if (returnForward.Count != 0)
+                {
+                    returnForward.Clear();
+                }
 
+            }
+        }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             Bitmap newImage = ((Filters.Filters)e.Argument).processImage(image, backgroundWorker1);
@@ -56,6 +69,8 @@ namespace GraphicsFirstLab
         {
             if (!e.Cancelled)
             {
+                SaveCondition();
+
                 image = (Bitmap)e.Result;
                 pictureBox1.Image = image;
                 pictureBox1.Refresh();
@@ -181,6 +196,28 @@ namespace GraphicsFirstLab
         {
             Filters.Filters filter = new MotionBlur();
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (returnBack.Count > 0)
+            {
+                returnForward.Push(new Bitmap(pictureBox1.Image));
+                image = returnBack.Pop();
+                pictureBox1.Image = image;
+                pictureBox1.Refresh();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (returnForward.Count > 0)
+            {
+                returnBack.Push(new Bitmap(pictureBox1.Image));
+                image = returnForward.Pop();
+                pictureBox1.Image = image;
+                pictureBox1.Refresh();
+            }
         }
     }
 }
